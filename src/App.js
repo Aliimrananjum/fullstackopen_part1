@@ -13,13 +13,13 @@ const Content =(props) =>{
       <Part part={props.part2}/>
       <Part part={props.part3}/>
     </div>
-  )
+  ) 
 }
 
 const Total =(props) =>{
   return(
     <div>
-      <p>Total Hours {props.total} </p>
+      <p>Total hours {props.total} </p>
     </div>
   )
 }
