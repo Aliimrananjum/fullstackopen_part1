@@ -8,7 +8,10 @@ const Button = ({onClick, text}) =>{
 
 const StatisticLine= ({text, value}) =>{
   return(
-    <p>{text} {value}</p>
+    <tr>
+      <td>{text}</td>
+      <td>{value}</td>
+    </tr>
   )
 }
 
@@ -22,12 +25,16 @@ const Statistics = (props) => {
     return(
 
       <div>
-        <StatisticLine text="Good" value ={props.good} />
-        <StatisticLine text="Neutral" value ={props.neutral} />
-        <StatisticLine text="Bad" value ={props.bad} />
-        <StatisticLine text="Total" value ={total} />
-        <StatisticLine text="Average" value ={average} />
-        <StatisticLine text="Prosent" value ={prosent} />
+        <table>
+         <tbody>
+          <StatisticLine text="Good" value ={props.good} />
+          <StatisticLine text="Neutral" value ={props.neutral} /> 
+          <StatisticLine text="Bad" value ={props.bad} />
+          <StatisticLine text="Total" value ={total} />
+          <StatisticLine text="Average" value ={average} />
+          <StatisticLine text="Prosent" value ={prosent} /> 
+          </tbody>
+        </table>
       </div>
   
     )
@@ -58,7 +65,7 @@ const App = () => {
       <Button onClick={increment(good,setGood)} text="Good"/>
       <Button onClick={increment(neutral,setNeutral)} text="Neutral"/>
       <Button onClick={increment(bad,setBad)} text="Bad"/>
-      <h2>Stastistics</h2>
+      <h2>Statistics</h2>
     <Statistics good={good} neutral={neutral} bad={bad} />
   
     </div>
